@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Blog</h1>
+    </header>
+    <div class="blog-list">
+      <ul>
+        <% posts.forEach((post, index) => { %>
+        <li>
+          <a href="/post/<%= index %>"><%= post.title %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </div>
+    <a href="/create">Create a New Post</a>
+  </body>
+</html>
